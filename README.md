@@ -4,12 +4,12 @@
 Ask a home buyer to describe their dream house, and they probably won't begin with the height of the basement ceiling or the proximity to an east-west railroad. But this playground competition's dataset proves that much more influences price negotiations than the number of bedrooms or a white-picket fence.
 With 79 explanatory variables describing (almost) every aspect of residential homes in Ames, Iowa, this competition challenges you to predict the final price of each home.
 
-File descriptions
+## File descriptions
 train.csv - the training set
 test.csv - the test set
 data_description.txt - full description of each column, originally prepared by Dean De Cock but lightly edited to match the column names used here
 sample_submission.csv - a benchmark submission from a linear regression on year and month of sale, lot square footage, and number of bedrooms
-##Data fields
+## Data fields
 Here's a brief version of what you'll find in the data description file.
 
 SalePrice - the property's sale price in dollars. This is the target variable that you're trying to predict.
@@ -93,9 +93,9 @@ YrSold: Year Sold
 SaleType: Type of sale
 SaleCondition: Condition of sale
 
-##Metric
+## Metric
 Submissions are evaluated on Root-Mean-Squared-Error (RMSE) between the logarithm of the predicted value and the logarithm of the observed sales price. (Taking logs means that errors in predicting expensive houses and cheap houses will affect the result equally.)
 
 In this contest, I predicted the price of a house relying on its signs. I used LGBM,XGB,CatBoost to implement the task.
 A detailed description of all the steps of the implementation can be found in the code. At the end I was able to implement a model which got the result 0.12018 for the given metric.
-Thus in the general offset I took the top 8%
+### Thus in the general offset I took the top 8%
